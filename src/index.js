@@ -2,17 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-class Square extends React.Component {
-  render() {
-    return (
-      <button 
-        className="square"
-        onClick={() => this.props.onClick()}
-      >
-        {this.props.value}
-      </button>
-    );
-  }
+//A component with only the render method can be written as function components
+function Square(props) {
+  return (
+    <button className='square' onClick={props.onClick}>
+      {props.value}
+    </button>
+  )
 }
 
 class Board extends React.Component {
